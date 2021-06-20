@@ -1,0 +1,153 @@
+object Form4: TForm4
+  Left = 615
+  Height = 455
+  Top = 232
+  Width = 589
+  BorderStyle = bsSingle
+  Caption = 'Program Perhitungan Gaji'
+  ClientHeight = 455
+  ClientWidth = 589
+  DesignTimePPI = 120
+  OnActivate = FormActivate
+  LCLVersion = '2.0.12.0'
+  object Label1: TLabel
+    Left = 40
+    Height = 20
+    Top = 80
+    Width = 110
+    Caption = 'NAMA PEGAWAI'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 40
+    Height = 20
+    Top = 120
+    Width = 61
+    Caption = 'JABATAN'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 40
+    Height = 20
+    Top = 160
+    Width = 81
+    Caption = 'GAJI POKOK'
+    ParentColor = False
+  end
+  object Edit1: TEdit
+    Left = 251
+    Height = 28
+    Top = 80
+    Width = 301
+    TabOrder = 0
+  end
+  object Label4: TLabel
+    Left = 40
+    Height = 20
+    Top = 288
+    Width = 140
+    Caption = 'TUNJANGAN STATUS'
+    ParentColor = False
+  end
+  object Label5: TLabel
+    Left = 40
+    Height = 20
+    Top = 368
+    Width = 83
+    Caption = 'GAJI BERSIH'
+    ParentColor = False
+  end
+  object cJabatan: TComboBox
+    Left = 251
+    Height = 28
+    Top = 120
+    Width = 245
+    ItemHeight = 20
+    Items.Strings = (
+      'Direktur'
+      'Manager'
+      'Karyawan'
+    )
+    OnChange = cJabatanChange
+    TabOrder = 1
+  end
+  object ePokok: TEdit
+    Left = 251
+    Height = 28
+    Top = 160
+    Width = 181
+    ReadOnly = True
+    TabOrder = 2
+  end
+  object eTunjangan: TEdit
+    Left = 251
+    Height = 28
+    Top = 288
+    Width = 181
+    ReadOnly = True
+    TabOrder = 4
+  end
+  object eBersih: TEdit
+    Left = 251
+    Height = 28
+    Top = 368
+    Width = 181
+    ReadOnly = True
+    TabOrder = 6
+  end
+  object GroupBox1: TGroupBox
+    Left = 40
+    Height = 64
+    Top = 208
+    Width = 512
+    Caption = 'Status'
+    ClientHeight = 39
+    ClientWidth = 508
+    TabOrder = 3
+    object eTetap: TRadioButton
+      Left = 96
+      Height = 24
+      Top = 0
+      Width = 62
+      Caption = 'Tetap'
+      OnChange = eTetapChange
+      TabOrder = 0
+    end
+    object eHonorer: TRadioButton
+      Left = 312
+      Height = 24
+      Top = 0
+      Width = 75
+      Caption = 'Kontrak'
+      OnChange = eHonorerChange
+      TabOrder = 1
+    end
+  end
+  object Button1: TButton
+    Left = 40
+    Height = 31
+    Top = 328
+    Width = 510
+    Caption = 'Total Gaji'
+    OnClick = Button1Click
+    TabOrder = 5
+  end
+  object Button2: TButton
+    Left = 40
+    Height = 31
+    Top = 408
+    Width = 248
+    Caption = 'ISI DATA LAGI'
+    OnClick = Button2Click
+    TabOrder = 7
+  end
+  object Button3: TButton
+    Left = 304
+    Height = 31
+    Top = 408
+    Width = 248
+    Caption = 'KELUAR'
+    OnClick = Button3Click
+    TabOrder = 8
+  end
+end
